@@ -1,4 +1,6 @@
-<div class="cloud2" id="<?=$name;?>" data-stellar-ratio="2">
+<li class="layer" data-depth="0.4">
+
+<div class="cloud2" class="cloud" id="<?=$name;?>">
 	<!-- <img src="assets/img/mycloud.svg"> -->
 <!-- </div> -->
 
@@ -19,6 +21,7 @@
   </defs>
  </g>
 </svg>
-
+<!-- <a href="#"><img src= "assets/img/cloud2.png"></a> -->
 </div>
 </div> 
+</li>

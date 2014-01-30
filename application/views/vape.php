@@ -3,7 +3,6 @@ session_start();
 // require_once(connection.php);
 
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,102 +12,21 @@ session_start();
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/jquery.mousewheel.js"></script>
 	<script src="assets/js/jquery.stellar.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			$(window).bind('resize', function(){
-			   	 var containerSize  = $('.container').width(),
-			        textPercentage = 0.17391304347826086956521739130435, /* 40/230 */
-			        textRatio      = containerSize * textPercentage,
-			        textEms        = textRatio / 100;
-
-		    $('.cloud3 h2').css('font-size', textEms+"em");
-		     $('.cloud2 h2').css('font-size', textEms+"em");
-		    $('#Vape h1').css('font-size', textEms*1.3 +"em");
-				}).trigger('resize');
-
-	// 		//firefox compatibility
-	// 		$('#elem').bind('DOMMouseScroll', function(e){
-	// 	     if(e.originalEvent.detail > 0) {
-	// 	         //scroll down
-	// 	         console.log('Down');
-	// 	     }else {
-	// 	         //scroll up
-	// 	         console.log('Up');
- //     }
-
- //     //prevent page fom scrolling
- //     return false;
- // });
-
-			// $(document).mousewheel(
-			// 	function(){
-			// 		console.log(event.deltaX, event.deltaY, event.deltaFactor);
-			// });
-			
-			
-		
-			
-
-	
-
-					$(document).mousewheel(
-						function(event, delta){		
-
-					
-					// 	var vapepx = $('#Vape').offset(),
-					// 	vapeheight = $('.container').height() - vapepx.top;
-					// 	 containerheight = $('.container').height(),
-					// 	 limit = (vapeheight / containerheight) * 100;
-					// console.log(limit);
-						var limit = document.getElementById('Vape').style.top;
-						console.log(limit);
-					
-					//tried a while loop, but got stuck in an infinite loop.
-					//I'm trying to use the position of the #vape object to set the upper and lower limits of movement
-					//the current "if" conditional completely stops the script when the #vape object reaches the top or bottom
-					//I only want the object to stop upward movement when it reaches the top and vice versa for bottom.
-					
-
-						
-							if(delta < 0){
-								$('#Vape').animate({bottom: "+=5%", right:"+=6%"}, 200);
-								$('#How').animate({bottom: "+=5%", left:"+=1%"}, 200);
-								$('#Why').animate({bottom: "+=5%", left:"+=5.5%"}, 200);
-								$('#Society').animate({bottom: "+=3.5%", left:"+=4.75%"}, 200);
-								$('#Health').animate({bottom: "+=3.5%", right:"+=2.5%"}, 200);
-								$('#Cost').animate({bottom: "+=4%", left:"+=3%"}, 200);
-								$('#Mods').animate({bottom: "+=3.75%", right:"+=4.5%"}, 200);
-								$('#Intro').animate({bottom: "+=4%", right:"+=0.75%"}, 200);
-							}
-							else if(delta > 0){
-								$('#Vape').animate({bottom: "-=5%", right:"-=6%"}, 200);
-								$('#How').animate({bottom: "-=5%", left:"-=1%"}, 200);
-								$('#Why').animate({bottom: "-=5%", left:"-=5.5%"}, 200);
-								$('#Society').animate({bottom: "-=3.5%", left:"-=4.75%"}, 200);
-								$('#Health').animate({bottom: "-=3.5%", right:"-=2.5%"}, 200);
-								$('#Cost').animate({bottom: "-=4%", left:"-=3%"}, 200);
-								$('#Mods').animate({bottom: "-=3.75%", right:"-=4.5%"}, 200);
-								$('#Intro').animate({bottom: "-=4%", right:"-=0.75%"}, 200);
-							}
-
-				 	
-				 		
-
-				 
-
-				 // while(limit < 103)
-			});
-
-			// }
 
 
-		});
-	</script>
 </head>
 <body>
 <div class="container">
+	<div class="signin">
+		<form action="" method="post">
+			<input type="text" name="email" placeholder="Enter Email">
+			<input type="password" name="password" placeholder="Enter Password">
+			<input id="signin_button" type="submit" name="login" Value="Sign In">
+		</form>
+		<p>Not a user? <a href="#"> Register Here</a></p>
+	</div>
 
+<ul id="scene">
 
 <?php 
 $cloud = array( 'name' =>'Vape');
@@ -135,6 +53,8 @@ $clouds3 = array(
 foreach($clouds3 as $cloud3)
 $this->load->view('cloud3.php', $cloud3);
 ?>
+
+</ul>
 <!-- 	<div class="vape">
 		<h1>Vape in Parallax</h1>
 	</div>
@@ -175,8 +95,97 @@ $this->load->view('cloud3.php', $cloud3);
 	</div>
 	<div class ="community">
 		<h2>Community</h2>
-	</div> -->
+	</discv> -->
 
 </div>
+<script src="assets/js/jquery-parallax.min.js"></script>
+<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			// console.log(window.document.body);
+
+			$(window).bind('resize', function(){
+			   	 var containerSize  = $('.container').width(),
+			        textPercentage = 0.17391304347826086956521739130435, /* 40/230 */
+			        textRatio      = containerSize * textPercentage,
+			        textEms        = textRatio / 100;
+
+		    $('.cloud3 h2').css('font-size', textEms+"em");
+		     $('.cloud2 h2').css('font-size', textEms+"em");
+		    $('#Vape h1').css('font-size', textEms*1.2 +"em");
+				}).trigger('resize');
+
+		// var top = $(window).scrollTop();
+		// console.log(top);
+
+			// $('.cloud2').hide();
+			// $('.cloud3').hide();		
+
+		// code for animating clouds to centered position and opening modal
+		// $(document).on('click', '#Society', function(){
+		// 	event.stopPropagation();
+		// 	$(this).animate({bottom: "80%", left: "30%"}, 500);
+		// 	status = 'off';
+		// 	status_off();
+		// });
+		
+		// $(document).on('click', '#Vape', function(){
+		// 	event.stopPropagation();
+		// 	$('.cloud2').toggle();
+		// 	$('.cloud3').toggle();
+
+		// 	});
+		
+			
+
+	
+
+		status = 'off'
+				
+		$('body').click(function(){
+			if (status == 'off'){
+			status = 'on';
+			status_on();
+
+			console.log('we just turned status on');
+						
+			}
+			else if (status == 'on'){
+			status = 'off';
+			status_off();
+			console.log('we just turned status off');
+			
+			}
+			
+		});
+
+
+		var status_on = function(){
+			$('#scene').parallax({
+				calibrateX: true,
+				calibrateY: true,
+			  	invertX: true,
+			  	invertY: true,
+			  	limitX: false,
+			  	limitY: false,
+			  	scalarX: 40,
+			  	scalarY: 15,
+			  	frictionX: 0.2,
+			  	frictionY: 0.8
+			});
+			$('#scene').parallax('enable');
+		};
+
+		var status_off = function(){
+			$('#scene').parallax('disable');
+
+		};
+
+		
+		
+		});
+
+</script>
 </body>
 </html>

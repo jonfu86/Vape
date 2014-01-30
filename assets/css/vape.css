@@ -14,28 +14,16 @@ body{
 }
 
 .cloud{
-	position:absolute;
-	/*width:445px;
-	height:142px;*/
 
-	/*width:30%;*/
-	height:25%;	
-	left:0;
-	right:0;
-	bottom:0%;
-	margin:0 auto;
-	/*opacity:0.5;*/
-	z-index:1;
-	/*background-image: url("mycloud.svg");*/
 }
 
 .cloud2{
 	position:absolute;
-	/*width:20%;*/
-	height:20%;	
+	width:10%;
+	height:25%;	
 	left:0;
 	right:0;
-	bottom:0%;
+	bottom:10%;
 	margin:0 auto;
 /*	opacity:0.3;*/
 	z-index:1;
@@ -45,14 +33,14 @@ body{
 .cloud2 h2{
 	color:white;
 	display:inline;
-	width:50%;
-	height:50%;
+	/*width:25%;
+	height:25%;*/
 	opacity:0.3;
 	position:absolute;
 	left:0;
 	right:0;
 	margin:0 auto;
-	bottom:5%;
+	bottom:25%;
 	text-align:center;
 }
 .cloud h1{
@@ -72,11 +60,11 @@ body{
 }
 .cloud3{
 	position:absolute;
-	/*width:20%;*/
-	height:20%;	
+	width:12%;
+	height:25%;	
 	left:0;
 	right:0;
-	bottom:0%;
+	bottom:10%;
 	margin:0 auto;
 	/*opacity:0.3;*/
 	z-index:1;
@@ -86,14 +74,14 @@ body{
 .cloud3 h2{
 	color:white;
 	display:inline;
-	width:50%;
-	height:50%;
+	/*width:50%;
+	height:50%;*/
 	opacity:0.3;
 	position:absolute;
 	left:0;
 	right:0;
 	margin:0 auto;
-	bottom:5%;
+	bottom:25%;
 	text-align:center;
 }
 .container{
@@ -101,13 +89,19 @@ body{
 	background:black;
 	width:100%;
 	height:100%;
+	/*z-index:-10000;*/
 }
 #Vape{
-	width:40%;
-	height:25%;
-	z-index:100;
+	position:absolute;
+	width:30%;
+	height:30%;
+	z-index:10000000;
 	opacity:0.8;
-	bottom:0%;
+	bottom:5%;
+	left:0;
+	right:0;
+	margin:0 auto;
+	/*opacity:0.5;*/
 }
 #Vape h1{
 	color:white;
@@ -119,11 +113,47 @@ body{
 	right:0;
 	margin:0 auto;
 	bottom:10%;
-	/*font-size:40px;*/
 	text-align:center;
-
 }
 
+ul{
+	height:100%;
+	width:100%;
+	margin:0 auto;
+	/*opacity:0;*/
+	/*background:black;*/
+}
+
+ul li{
+	
+}
+
+.opac img{
+	height:20%;
+	width:20%;
+}
+.signin{
+	width:13%;
+	padding:1%;
+	float:right;
+}
+.signin form{
+	width:80%;
+}
+.signin input{
+
+	margin:2%;
+}
+
+#signin_button{
+	margin-left:52%;
+}
+
+.signin p{
+	margin-top:3%;
+	color:white;
+	display:block;
+}
 
 #Intro{
 	

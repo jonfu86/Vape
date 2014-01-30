@@ -1,4 +1,4 @@
-<div class="main_cloud <?=$name;?>" data-stellar-ratio="2">
+<div class="main_cloud <?=$name;?>">
 	<!-- <img src="assets/img/mycloud.svg"> -->
 <!-- </div> -->
 
