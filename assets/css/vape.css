@@ -119,13 +119,14 @@ body{
 ul{
 	height:100%;
 	width:100%;
-	margin:0 auto;
+	/*margin:0 auto;*/
+	-webkit-padding-start:0;
 	/*opacity:0;*/
 	/*background:black;*/
 }
 
-ul li{
-	
+li{
+	display:inline-block; important
 }
 
 .opac img{
@@ -158,4 +159,11 @@ ul li{
 #Intro{
 	
 	
+}
+
+h2{
+	color:red;
+}
+.ui-dialog{
+	background:grey;
 }

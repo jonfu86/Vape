@@ -20,6 +20,18 @@ class Welcome extends CI_Controller {
 		
 	}
 
+	public function register()
+	{
+		$this->load->view('registration');
+	}
+
+	public function profile()
+	{
+		$this->load->view('profile');
+
+	}
+
+
 	// public function create_cloud($name)
 	// {
 
