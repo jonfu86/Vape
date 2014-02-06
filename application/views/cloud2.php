@@ -1,4 +1,4 @@
-<li class="layer" data-depth="0.4">
+<!-- <li class="layer" data-depth="0.4"> -->
 
 <div class="cloud2 cloud" id="<?=$name;?>">
 	<!-- <img src="assets/img/mycloud.svg"> -->
@@ -24,4 +24,4 @@
 <!-- <a href="#"><img src= "assets/img/cloud2.png"></a> -->
 </div>
 </div> 
-</li>
+<!-- </li> -->
