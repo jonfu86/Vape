@@ -8,10 +8,54 @@ html{
 }
 body{
 	height:100%;
+	overflow: hidden;
 }
 .opac{
-	opacity:0.4;
+	opacity:0.6;
 }
+.layer{
+	opacity:0.4;
+	/*position:relative;*/
+	/*position:absolute;*/
+	/*left:35%;*/
+	/*right:0;
+	margin:0 auto;*/
+}
+#scene{
+	z-index:3;
+}
+.layer img{
+	/*height: 10%;*/
+	width: 10%;
+}
+.one{
+	margin: 0% 0% 0% 60%;
+}
+.two{
+	margin: 5% 0% 0% -15%;
+}
+.three{
+	margin: 20% 0% 0% 60%;
+}
+.four{
+	margin: 13% 0% 0% 45%;
+}
+.five{
+	margin: 25% 0% 0% 10%;
+}
+.six{
+	margin: 10% 0% 0% 27%;
+}
+.seven{
+	margin: 22% 0% 0% 32%;
+}
+.eight{
+	margin: 17% 0% 0% 95%;
+}
+.nine{
+	margin: 10% 0% 0% 87%;
+}
+
 #modal{
 	position:absolute;
 	top:40%;
@@ -25,17 +69,30 @@ body{
 }
 .ui-dialog{
 	/*width:40% !important;*/
-	border:red 3px solid;
+	border:gray 3px solid;
 	border-radius: 15px;
 	padding:2%;
 	z-index:100;
 }
+.ui-dialog-titlebar{
+	/*height:100%;*/
+}
+
 .ui-dialog-titlebar-close {
 	float:right;
 }
+.ui-button{
+	height: 8%;
+	background: transparent;
+	border-style:none;
+}
+.ui-button img{
+	height: 5%;
+	/*width: 5%;*/
+}
 
 .cloud{
-
+	
 }
 
 .cloud2{
@@ -47,7 +104,7 @@ body{
 	bottom:10%;
 	margin:0 auto;
 /*	opacity:0.3;*/
-	z-index:1;
+	z-index:5;
 	
 }
 
@@ -56,7 +113,7 @@ body{
 	display:inline;
 	/*width:25%;
 	height:25%;*/
-	opacity:0.3;
+	opacity:0.8;
 	position:absolute;
 	left:0;
 	right:0;
@@ -88,7 +145,7 @@ body{
 	bottom:10%;
 	margin:0 auto;
 	/*opacity:0.3;*/
-	z-index:1;
+	z-index:5;
 	
 }
 
@@ -97,7 +154,7 @@ body{
 	display:inline;
 	/*width:50%;
 	height:50%;*/
-	opacity:0.3;
+	opacity:0.8;
 	position:absolute;
 	left:0;
 	right:0;
@@ -107,9 +164,10 @@ body{
 }
 .container{
 	position:relative;
-	background:black;
+	background-image:url('smoke2.png');
 	width:100%;
 	height:100%;
+	overflow:hidden;
 	/*z-index:-10000;*/
 }
 #Vape{
@@ -177,14 +235,22 @@ li{
 	display:block;
 }
 
-#Intro{
-	
-	
-}
 
 h2{
-	color:red;
+	color:white;
+}
+p{
+	color: #C0C0C0;
 }
 .ui-dialog{
-	background:grey;
+	background: rgb(30,87,153); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 54%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(54%,rgba(41,137,216,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 54%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 54%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 54%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 54%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	;
+	opacity:0.7;
 }

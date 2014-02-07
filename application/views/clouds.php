@@ -1,6 +1,5 @@
-<li class="layer" data-depth="0"> -->
 
-<div class="cloud" id="<?=$name;?>">
+<div id="<?=$name;?>">
 	<!-- <img src="assets/img/mycloud.svg"> -->
 <!-- </div> -->
 

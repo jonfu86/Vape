@@ -54,6 +54,15 @@ foreach($clouds3 as $cloud3)
 $this->load->view('cloud3.php', $cloud3);
 ?>
 <ul id="scene">
+	<li class="layer one" data-depth="0.5"><img src= "assets/img/bgcloud2.png"></li>
+	<li class="layer two" data-depth="0.6"><img src= "assets/img/bgcloud3.png"></li>
+	<li class="layer three" data-depth="0.6"><img src= "assets/img/bgcloud3.png"></li>
+	<li class="layer four" data-depth="0.4"><img src= "assets/img/bgcloud2.png"></li>
+	<li class="layer five" data-depth="0.4"><img src= "assets/img/bgcloud2.png"></li>
+	<li class="layer six" data-depth="0.2"><img src= "assets/img/bgcloud2.png"></li>
+	<li class="layer seven" data-depth="0.3"><img src= "assets/img/bgcloud3.png"></li>
+	<li class="layer eight" data-depth="0.6"><img src= "assets/img/bgcloud3.png"></li>
+	<li class="layer nine" data-depth="0.4"><img src= "assets/img/bgcloud3.png"></li>
 </ul>
 
 <div id ="modal">
@@ -82,8 +91,8 @@ $this->load->view('cloud3.php', $cloud3);
 			<br>
 			<h2>What is Nicotine?</h2>
 			<br>
-			<p>One of the main ingredients in e-liquids is nicotine and it is the primary reason why people use vapes. Nicotine is considered both a stimulant and a relaxant and is not as harmful as most people believe. Nicotine increases your blood pressure and heart rate which isn't good for your health and is highly addictive. Nicotine shouldn't be used by pregnant women as there is an increased risk of birth defects. According to the CDC (Center for Disease Control), information about nicotine as a carcinogen is inconclusive. Several studies have shown that nicotine can actually improve your short term memory.
-			</p>
+			<p>One of the main ingredients in e-liquids is nicotine and it is the primary reason why people use vapes. Nicotine is considered both a stimulant and a relaxant and is not as harmful as most people believe. Nicotine increases your blood pressure and heart rate which isn't good for your health and is highly addictive. Nicotine shouldn't be used by pregnant women as there is an increased risk of birth defects. According to the CDC (Center for Disease Control), information about nicotine as a carcinogen is inconclusive. Several studies have shown that nicotine can actually improve your short term memory.</p>
+			<br>
 			<h2>The Effect of Vaping on your Health</h2>
 			<br>
 			<p>So what makes vaping healthier than smoking traditional cigarettes? Nicotine is not what kills people in cigarettes! Traditional cigarette smoke contains over 70 carcinogens, many of which are from toxic chemicals like tar and arsenic that are added to make them more addictive. E-liquids don't contain any of these extra additives. The burning of tobacco in cigarettes also creates carbon monixide, which is extremely toxic to people. Vaping completely removes the combustion of tobacco and doesn't create any carbon monoxide. The majority of vapers report that vaping is much better on the lungs compared to traditional smoking. Although no studies have been published on the effects of vaping on the lungs, there are thousands of anecdotal accounts of vaping improving lung function in smokers who have made the switch. Watch this youtube video 
@@ -103,10 +112,13 @@ $this->load->view('cloud3.php', $cloud3);
 		</div>
 	</div>
 </div>
+</div>
 <script src="assets/js/jquery-parallax.min.js"></script>
 <script type="text/javascript">
 
 		$(document).ready(function(){
+
+			$('.cloud').hide();
 
 			var hideall = function(){
 
@@ -151,7 +163,8 @@ $this->load->view('cloud3.php', $cloud3);
 	      autoOpen: false,
 	      modal: true,
 	      width: 700,
-	      position: {my: 'center', at: 'center', of: '#modal'},
+	      position: {my: 'center top', at: 'center top', of: '#modal'},
+	      closeText: '<img src= "assets/img/close.png">',
 	      
 
 	      show: {
@@ -178,9 +191,9 @@ $this->load->view('cloud3.php', $cloud3);
 			        textPercentage = 0.17391304347826086956521739130435, /* 40/230 */
 			        textRatio      = containerSize * textPercentage,
 			        textEms        = textRatio / 100;
-
-		    $('.cloud3 h2').css('font-size', textEms+"em");
-		     $('.cloud2 h2').css('font-size', textEms+"em");
+			$('#dialog p').css('font-size', textEms*0.3+"em");
+		    $('h2').css('font-size', textEms+"em");
+		     $('#dialog h2').css('font-size', textEms*0.6+"em");
 		    $('#Vape h1').css('font-size', textEms*1.2 +"em");
 				}).trigger('resize');
 
@@ -213,26 +226,27 @@ $this->load->view('cloud3.php', $cloud3);
 
 	
 
-		status = 'off'
+		// status = 'off'
 				
-		$('body').click(function(){
-			if (status == 'off'){
-			status = 'on';
-			status_on();
-			console.log('we just turned status on');
+		// $('body').click(function(){
+		// 	if (status == 'off'){
+		// 	status = 'on';
+		// 	status_on();
+		// 	console.log('we just turned status on');
 						
-			}
-			else if (status == 'on'){
-			status = 'off';
-			status_off();
-			console.log('we just turned status off');
+		// 	}
+		// 	else if (status == 'on'){
+		// 	status = 'off';
+		// 	status_off();
+		// 	console.log('we just turned status off');
 			
-			}
+		// 	}
 			
-		});
+		// });
 
 
-		var status_on = function(){
+		// var status_on = 
+		// function(){
 			$('#scene').parallax({
 				calibrateX: true,
 				calibrateY: true,
@@ -240,19 +254,19 @@ $this->load->view('cloud3.php', $cloud3);
 			  	invertY: true,
 			  	limitX: false,
 			  	limitY: false,
-			  	scalarX: 30,
-			  	scalarY: 15,
-			  	frictionX: 0.2,
+			  	scalarX: 60,
+			  	scalarY: 35,
+			  	frictionX: 0.4,
 			  	frictionY: 0.8
 			});
 
-			$('#scene').parallax('enable');
-		};
+			// $('#scene').parallax('enable');
+		// };
 
-		var status_off = function(){
-			$('#scene').parallax('disable');
+		// var status_off = function(){
+		// 	$('#scene').parallax('disable');
 
-		};
+		// };
 
 			// $(document).mousewheel(
 			// 	function(){
@@ -307,6 +321,19 @@ $this->load->view('cloud3.php', $cloud3);
 								$('#Intro').animate({bottom: "-=4.25%", right:"-=1%"}, 200);
 							}
 						}
+
+
+
+						if(distance >= -100){
+							$('.cloud').hide();
+						}
+						else{
+							$('.cloud').show();
+						}
+
+						// if(distance >= -1600){
+						// 	$('.opac').css('opacity, 1');
+						// }
 
 
 
