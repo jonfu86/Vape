@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'localhost/VAPE/';
+$config['base_url']	= 'localhost/Vape';
 
 /*
 |--------------------------------------------------------------------------
