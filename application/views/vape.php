@@ -17,14 +17,14 @@ session_start();
 </head>
 <body>
 <div class="container">
-	<div class="signin">
+	<!-- <div class="signin">
 		<form action="" method="post">
 			<input type="text" name="email" placeholder="Enter Email">
 			<input type="password" name="password" placeholder="Enter Password">
 			<input id="signin_button" type="submit" name="login" Value="Sign In">
 		</form>
 		<p>Not a user? <a href="register"> Register Here</a></p>
-	</div>
+	</div> -->
 
 
 
@@ -191,7 +191,7 @@ $this->load->view('cloud3.php', $cloud3);
 			        textPercentage = 0.17391304347826086956521739130435, /* 40/230 */
 			        textRatio      = containerSize * textPercentage,
 			        textEms        = textRatio / 100;
-			$('#dialog p').css('font-size', textEms*0.3+"em");
+			$('#dialog p').css('font-size', textEms*0.35+"em");
 		    $('h2').css('font-size', textEms+"em");
 		     $('#dialog h2').css('font-size', textEms*0.6+"em");
 		    $('#Vape h1').css('font-size', textEms*1.2 +"em");
@@ -295,6 +295,14 @@ $this->load->view('cloud3.php', $cloud3);
 					// 	 limit = (vapeheight / containerheight) * 100;
 					// console.log(limit);
 						// var limit = document.getElementById('Vape').style.top;
+						if(distance < -1600){
+							distance = -1700;
+						}
+
+						if(distance > 0){
+							distance = 100;
+						}
+
 
 
 						if(distance >= -1600 && distance < 0){
