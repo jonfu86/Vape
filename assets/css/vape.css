@@ -204,9 +204,9 @@ ul{
 	/*background:black;*/
 }
 
-li{
-	display:inline-block; important
-}
+/*li{
+	display:inline-block important
+}*/
 
 .opac img{
 	height:20%;

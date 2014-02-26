@@ -66,7 +66,7 @@ $this->load->view('cloud3.php', $cloud3);
 </ul>
 
 <div id ="modal">
-	<div id="dialog" title="">
+	<div id="dialog" title=" ">
 	 
 		<div class="intro">
 			<h2>What is Vaping?</h2>
