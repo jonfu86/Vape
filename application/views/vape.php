@@ -17,14 +17,19 @@ session_start();
 </head>
 <body>
 <div class="container">
-	<!-- <div class="signin">
-		<form action="" method="post">
-			<input type="text" name="email" placeholder="Enter Email">
-			<input type="password" name="password" placeholder="Enter Password">
-			<input id="signin_button" type="submit" name="login" Value="Sign In">
-		</form>
-		<p>Not a user? <a href="register"> Register Here</a></p>
-	</div> -->
+	<div class="corner">
+		<div class="signin">
+			<form action="" method="post">
+				<input type="text" name="email" placeholder="Enter Email">
+				<input type="password" name="password" placeholder="Enter Password">
+				<input id="signin_button" type="submit" name="login" Value="Sign In">
+			</form>
+			<!-- <p>Not a user? <a href="register"> Register Here</a></p> -->
+		</div>
+		<div class="register">
+			<a href="register"><p>Create Account</p></a>
+		</div>
+	</div>
 
 
 
@@ -134,29 +139,43 @@ $this->load->view('cloud3.php', $cloud3);
 
 
 			$('#Intro').click(function(){
+				active();
+				$('#Intro').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.intro').show();
 			});
 			$('#How').click(function(){
+				active();
+				$('#How').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.how').show();
 			});
 			$('#Why').click(function(){
+				active();
+				$('#Why').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.why').show();
 			});
 			$('#Health').click(function(){
+				active();
+				$('#Health').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.health').show();
 			});
 			$('#Cost').click(function(){
+				active();
+				$('#Cost').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.cost').show();
 			});
 			$('#Mods').click(function(){
+				active();
+				$('#Mods').animate({bottom: "55%", left:"0", right:"0"}, 2000);
 				hideall();
 				$('.mods').show();
 			});
+			
+			
 
 	$(function() {
 	    $( "#dialog" ).dialog({
@@ -212,12 +231,7 @@ $this->load->view('cloud3.php', $cloud3);
 		// });
 
 		
-		// $(document).on('click', '#Vape', function(){
-		// 	event.stopPropagation();
-		// 	$('.cloud2').toggle();
-		// 	$('.cloud3').toggle();
-
-		// 	});
+		
 		
 		
 			
@@ -226,23 +240,23 @@ $this->load->view('cloud3.php', $cloud3);
 
 	
 
-		// status = 'off'
+		status = 'off'
 				
-		// $('body').click(function(){
-		// 	if (status == 'off'){
-		// 	status = 'on';
-		// 	status_on();
-		// 	console.log('we just turned status on');
+		$('#Vape').click(function(){
+			if (status == 'off'){
+			status = 'on';
+			// status_on();
+			console.log('we just turned status on');
 						
-		// 	}
-		// 	else if (status == 'on'){
-		// 	status = 'off';
-		// 	status_off();
-		// 	console.log('we just turned status off');
+			}
+			else if (status == 'on'){
+			status = 'off';
+			// status_off();
+			console.log('we just turned status off');
 			
-		// 	}
+			}
 			
-		// });
+		});
 
 
 		// var status_on = 
@@ -268,118 +282,138 @@ $this->load->view('cloud3.php', $cloud3);
 
 		// };
 
-			// $(document).mousewheel(
-			// 	function(){
-			// 		console.log(event.deltaX, event.deltaY, event.deltaFactor);
-			// });
-					var distance = 0;
+		
+					// var distance = 0;
 
-					console.log(window.document.body.clientHeight);
+					// console.log(window.document.body.clientHeight);
 	
 
-					$(document).mousewheel( 
-						function(event, delta){
-							console.log(event.deltaY, event.deltaFactor);
+					// $(document).mousewheel( 
+					// 	function(event, delta){
+					// 		console.log(event.deltaY, event.deltaFactor);
 
-							distance = distance + (event.deltaY * event.deltaFactor);
-							// return distance;
+					// 		distance = distance + (event.deltaY * event.deltaFactor);
+					// 		// return distance;
 							
-							console.log(distance);
-							// var wheight = window.document.body.clientHeight
+					// 		console.log(distance);
+					// 		// var wheight = window.document.body.clientHeight
 							
 
-					
-					// 	var vapepx = $('#Vape').offset(),
-					// 	vapeheight = $('.container').height() - vapepx.top;
-					// 	 containerheight = $('.container').height(),
-					// 	 limit = (vapeheight / containerheight) * 100;
-					// console.log(limit);
-						// var limit = document.getElementById('Vape').style.top;
-						if(distance < -1600){
-							distance = -1700;
-						}
+					// 	if(distance < -1600){
+					// 		distance = -1700;
+					// 	}
 
-						if(distance > 0){
-							distance = 100;
-						}
+					// 	if(distance > 0){
+					// 		distance = 100;
+					// 	}
 
 
 
-						if(distance >= -1600 && distance < 0){
-							if(delta < 0){
-								$('#Vape').animate({bottom: "+=4.85%", right:"+=6%"}, 200);
-								$('#How').animate({bottom: "+=3.75%", left:"+=1%"}, 200);
-								$('#Why').animate({bottom: "+=3.5%", left:"+=5%"}, 200);
-								// $('#Society').animate({bottom: "+=3.5%", left:"+=4.75%"}, 200);
-								$('#Health').animate({bottom: "+=3.5%", right:"+=2.5%"}, 200);
-								$('#Cost').animate({bottom: "+=4.25%", left:"+=2.75%"}, 200);
-								$('#Mods').animate({bottom: "+=3.5%", right:"+=4.85%"}, 200);
-								$('#Intro').animate({bottom: "+=4.25%", right:"+=1%"}, 200);
-							}
-						}
-						if(distance > -1600 && distance <= 0){
-							if(delta > 0){
-								$('#Vape').animate({bottom: "-=4.85%", right:"-=6%"}, 200);
-								$('#How').animate({bottom: "-=3.75%", left:"-=1%"}, 200);
-								$('#Why').animate({bottom: "-=3.5%", left:"-=4.85%"}, 200);
-								// $('#Society').animate({bottom: "-=3.5%", left:"-=4.75%"}, 200);
-								$('#Health').animate({bottom: "-=3.5%", right:"-=2.5%"}, 200);
-								$('#Cost').animate({bottom: "-=4.25%", left:"-=2.75%"}, 200);
-								$('#Mods').animate({bottom: "-=3.5%", right:"-=5%"}, 200);
-								$('#Intro').animate({bottom: "-=4.25%", right:"-=1%"}, 200);
-							}
-						}
+					// 	if(distance >= -1600 && distance < 0){
+					// 		if(delta < 0){
+					// 			$('#Vape').animate({bottom: "+=4.85%", right:"+=6%"}, 200);
+					// 			$('#How').animate({bottom: "+=3.75%", left:"+=1%"}, 200);
+					// 			$('#Why').animate({bottom: "+=3.5%", left:"+=5%"}, 200);
+					// 			// $('#Society').animate({bottom: "+=3.5%", left:"+=4.75%"}, 200);
+					// 			$('#Health').animate({bottom: "+=3.5%", right:"+=2.5%"}, 200);
+					// 			$('#Cost').animate({bottom: "+=4.25%", left:"+=2.75%"}, 200);
+					// 			$('#Mods').animate({bottom: "+=3.5%", right:"+=4.85%"}, 200);
+					// 			$('#Intro').animate({bottom: "+=4.25%", right:"+=1%"}, 200);
+					// 		}
+					// 	}
+					// 	if(distance > -1600 && distance <= 0){
+					// 		if(delta > 0){
+					// 			$('#Vape').animate({bottom: "-=4.85%", right:"-=6%"}, 200);
+					// 			$('#How').animate({bottom: "-=3.75%", left:"-=1%"}, 200);
+					// 			$('#Why').animate({bottom: "-=3.5%", left:"-=4.85%"}, 200);
+					// 			// $('#Society').animate({bottom: "-=3.5%", left:"-=4.75%"}, 200);
+					// 			$('#Health').animate({bottom: "-=3.5%", right:"-=2.5%"}, 200);
+					// 			$('#Cost').animate({bottom: "-=4.25%", left:"-=2.75%"}, 200);
+					// 			$('#Mods').animate({bottom: "-=3.5%", right:"-=5%"}, 200);
+					// 			$('#Intro').animate({bottom: "-=4.25%", right:"-=1%"}, 200);
+					// 		}
+					// 	}
 
 
 
-						if(distance >= -100){
-							$('.cloud').hide();
-						}
-						else{
-							$('.cloud').show();
-						}
+					// 	if(distance >= -100){
+					// 		$('.cloud').hide();
+					// 	}
+					// 	else{
+					// 		$('.cloud').show();
+					// 	}
 
 						// if(distance >= -1600){
 						// 	$('.opac').css('opacity, 1');
 						// }
 
+					$('.layer').hide();
+
+					$('#Vape').hover(
+						function(){$(this).find(".opac").animate({ opacity: 1 });},
+						function(){$(this).find(".opac").animate({ opacity: 0.6});}
+					);
+
+					$('.cloud').hover(
+						function(){$(this).find(".opac").animate({ opacity: 1 });},
+						function(){$(this).find(".opac").animate({ opacity: 0.6});}
+					);
 
 
+					active = function(){
+							$('#Vape').animate({bottom: "80%", right:"95%"}, 2000);
+							$('#How').animate({bottom: "75%", left:"48%"}, 2000);
+							$('#Why').animate({bottom: "70%", left:"20%"}, 2000);
+							$('#Society').animate({bottom: "75%", left:"30%"}, 2000);
+							$('#Health').animate({bottom: "77%", right:"15%"}, 2000);
+							$('#Cost').animate({bottom: "60%", left:"70%"}, 2000);
+							$('#Mods').animate({bottom: "60%", right:"70%"}, 2000);
+							$('#Intro').animate({bottom: "65%", right:"40%"}, 2000);
+						}
 
-
-					// $('#Vape').click(function(){
-					// 	var limit = document.getElementById('Vape').style.top;
+					$('#Vape').click(function(){
+						
 			
-					// 		if(limit < 200){
-					// 			$('#Vape').animate({bottom: "85%", right:"95%"}, 2000);
-					// 			$('#How').animate({bottom: "+=5%", left:"+=1%"}, 200);
-					// 			$('#Why').animate({bottom: "+=5%", left:"+=5.5%"}, 200);
-					// 			$('#Society').animate({bottom: "+=3.5%", left:"+=4.75%"}, 200);
-					// 			$('#Health').animate({bottom: "+=3.5%", right:"+=2.5%"}, 200);
-					// 			$('#Cost').animate({bottom: "+=4%", left:"+=3%"}, 200);
-					// 			$('#Mods').animate({bottom: "+=3.75%", right:"+=4.5%"}, 200);
-					// 			$('#Intro').animate({bottom: "+=4%", right:"+=0.75%"}, 200);
-					// 		}
-					// 		else {
-					// 			// if(delta > 0){
-					// 			$('#Vape').animate({bottom: "-=5%", right:"-=6%"}, 200);
-					// 			$('#How').animate({bottom: "-=5%", left:"-=1%"}, 200);
-					// 			$('#Why').animate({bottom: "-=5%", left:"-=5.5%"}, 200);
-					// 			$('#Society').animate({bottom: "-=3.5%", left:"-=4.75%"}, 200);
-					// 			$('#Health').animate({bottom: "-=3.5%", right:"-=2.5%"}, 200);
-					// 			$('#Cost').animate({bottom: "-=4%", left:"-=3%"}, 200);
-					// 			$('#Mods').animate({bottom: "-=3.75%", right:"-=4.5%"}, 200);
-					// 			$('#Intro').animate({bottom: "-=4%", right:"-=0.75%"}, 200);
-					// 		}
+							if(status == 'on'){
+								// $('#Vape').animate({bottom: "80%", right:"95%"}, 2000);
+								// $('#How').animate({bottom: "75%", left:"48%"}, 2000);
+								// $('#Why').animate({bottom: "70%", left:"20%"}, 2000);
+								// $('#Society').animate({bottom: "75%", left:"30%"}, 2000);
+								// $('#Health').animate({bottom: "77%", right:"15%"}, 2000);
+								// $('#Cost').animate({bottom: "60%", left:"70%"}, 2000);
+								// $('#Mods').animate({bottom: "60%", right:"70%"}, 2000);
+								// $('#Intro').animate({bottom: "65%", right:"40%"}, 2000);
+								active();
+								$('.cloud').show();
+								$('.layer').fadeIn(800);
+							}
+							else if(status =='off'){
+								$('#Vape').animate({bottom: "5%", left:"0", right:"0"}, 2000, function(){$('.cloud').hide();});
+								$('#How').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Why').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Society').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Health').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Cost').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Mods').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('#Intro').animate({bottom: "10%", left:"0", right:"0"}, 2000);
+								$('.layer').fadeOut(800);
+
+
+
+								// $('#Vape').animate({bottom: "-=5%", right:"-=6%"}, 2000);
+								// $('#How').animate({bottom: "-=5%", left:"-=1%"}, 2000);
+								// $('#Why').animate({bottom: "-=5%", left:"-=5.5%"}, 2000);
+								// $('#Society').animate({bottom: "-=3.5%", left:"-=4.75%"}, 2000);
+								// $('#Health').animate({bottom: "-=3.5%", right:"-=2.5%"}, 2000);
+								// $('#Cost').animate({bottom: "-=4%", left:"-=3%"}, 2000);
+								// $('#Mods').animate({bottom: "-=3.75%", right:"-=4.5%"}, 2000);
+								// $('#Intro').animate({bottom: "-=4%", right:"-=0.75%"}, 2000);
+							}
 
 				 	
-				 		
-
 				 
-
-				 // while(limit < 103)
 			});
-
+		
 	
 		
 		});

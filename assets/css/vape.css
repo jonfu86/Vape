@@ -15,6 +15,7 @@ body{
 }
 .layer{
 	opacity:0.4;
+	z-index:0;
 	/*position:relative;*/
 	/*position:absolute;*/
 	/*left:35%;*/
@@ -23,13 +24,14 @@ body{
 }
 #scene{
 	z-index:3;
+	width:80%;
 }
 .layer img{
 	/*height: 10%;*/
-	width: 10%;
+	width: 12%;
 }
 .one{
-	margin: 0% 0% 0% 60%;
+	margin: 0% 0% 0% 30%;
 }
 .two{
 	margin: 5% 0% 0% -15%;
@@ -82,13 +84,14 @@ body{
 	float:right;
 }
 .ui-button{
-	height: 8%;
+	height: 7%;
 	background: transparent;
 	border-style:none;
+	z-index:10;
 }
 .ui-button img{
-	height: 5%;
-	/*width: 5%;*/
+	height: 4%;
+	/*width: 4%;*/
 }
 
 .cloud{
@@ -98,7 +101,7 @@ body{
 .cloud2{
 	position:absolute;
 	width:10%;
-	height:25%;	
+	max-height:25%;	
 	left:0;
 	right:0;
 	bottom:10%;
@@ -110,7 +113,7 @@ body{
 
 .cloud2 h2{
 	color:white;
-	display:inline;
+	/*display:inline;*/
 	/*width:25%;
 	height:25%;*/
 	opacity:0.8;
@@ -123,7 +126,7 @@ body{
 }
 .cloud h1{
 	/*color:rgba(255, 255, 255, 1);*/
-	display:inline;
+	/*display:inline;*/
 	color:white;
 	opacity:1;
 	/*font-size:0.5em;*/
@@ -139,21 +142,17 @@ body{
 .cloud3{
 	position:absolute;
 	width:12%;
-	height:25%;	
+	max-height:25%;	
 	left:0;
 	right:0;
 	bottom:10%;
 	margin:0 auto;
-	/*opacity:0.3;*/
 	z-index:5;
 	
 }
 
 .cloud3 h2{
 	color:white;
-	display:inline;
-	/*width:50%;
-	height:50%;*/
 	opacity:0.8;
 	position:absolute;
 	left:0;
@@ -168,19 +167,18 @@ body{
 	width:100%;
 	height:100%;
 	overflow:hidden;
-	/*z-index:-10000;*/
+	
 }
 #Vape{
 	position:absolute;
 	width:33%;
-	height:33%;
+	max-height:33%;
 	z-index:10;
-	opacity:1;
 	bottom:5%;
 	left:0;
 	right:0;
 	margin:0 auto;
-	/*opacity:0.5;*/
+	
 }
 #Vape h1{
 	color:white;
@@ -196,42 +194,111 @@ body{
 }
 
 ul{
-	/*height:100%;
-	width:100%;*/
-	/*margin:0 auto;*/
-	-webkit-padding-start:0;
-	/*opacity:0;*/
-	/*background:black;*/
-}
 
-/*li{
-	display:inline-block important
-}*/
+	-webkit-padding-start:0;
+
+}
 
 .opac img{
 	height:20%;
 	width:20%;
 }
-.signin{
-	width:13%;
-	padding:1%;
+.corner{
 	float:right;
 }
+.signin{
+	z-index:5;
+	opacity:0.8;
+	border-bottom-left-radius:10px;
+	width:160px;
+	/*margin:0.5%;*/
+	padding:0.5%;
+	float:right;
+	background:#87e0fd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 69%, #05abe0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(69%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 69%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 69%,#05abe0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 69%,#05abe0 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 69%,#05abe0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */;
+}
 .signin form{
+	float:right;
 	width:80%;
 }
 .signin input{
-
+	float:right;
 	margin:2%;
 }
 
 #signin_button{
-	margin-left:52%;
+	margin-top:3.5%;
+	-moz-box-shadow:inset 1px 1px 9px -1px #dcecfb;
+	-webkit-box-shadow:inset 1px 1px 9px -1px #dcecfb;
+	box-shadow:inset 1px 1px 9px -1px #dcecfb;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a3cefa), color-stop(1, #3f86cc) );
+	background:-moz-linear-gradient( center top, #a3cefa 5%, #3f86cc 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a3cefa', endColorstr='#3f86cc');
+	background-color:#a3cefa;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-radius-topleft:5px;
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
+	text-indent:0px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#d9c8d9;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:26px;
+	line-height:26px;
+	width:66px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 37px #326699;
+}
+#signin_button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3f86cc), color-stop(1, #a3cefa) );
+	background:-moz-linear-gradient( center top, #3f86cc 5%, #a3cefa 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f86cc', endColorstr='#a3cefa');
+	background-color:#3f86cc;
+}
+#signin_button:active {
+	position:relative;
+	top:1px;
 }
 
+
 .signin p{
+	float:right;
 	margin-top:3%;
 	color:white;
+	display:block;
+}
+
+.register {
+	float:right;
+	display:block;
+	width:160px;
+	height:20px;
+}
+.register a{
+	display:block;
+	text-decoration: none;
+	text-align:right;
+}
+.reigster p{
 	display:block;
 }
 

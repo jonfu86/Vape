@@ -7,16 +7,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('vape');
 		
-
-
-		// $this->main_cloud('Vape in Parallax');
-		// $this->create_cloud('What is Vaping?');
-		// $this->create_cloud('How do they Work?');
-		// $this->create_cloud('Why Vape?');
-		// $this->create_cloud('Effects on Health');
-		// $this->create_cloud('What does it Cost?');
-		// $this->create_cloud('Customization');
-		// $this->create_cloud('Community');
 		
 	}
 
